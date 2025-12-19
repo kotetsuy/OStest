@@ -1,0 +1,9 @@
+#!/bin/zsh
+HOMEBREW_LLVM_BIN="/opt/homebrew/opt/llvm/bin"
+if [ -d "$HOMEBREW_LLVM_BIN" ]; then
+  export PATH="$HOMEBREW_LLVM_BIN:$PATH"
+  echo "PATH updated (session only): $HOMEBREW_LLVM_BIN"
+else
+  echo "Error: $HOMEBREW_LLVM_BIN not found"
+  exit 1
+fi
